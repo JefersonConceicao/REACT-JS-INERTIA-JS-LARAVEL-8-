@@ -1,0 +1,35 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "@babel/preset-react": "^7.16.7",
+        "axios": "^0.21",
+        "browser-sync": "^2.27.7",
+        "browser-sync-webpack-plugin": "^2.3.0",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "postcss": "^8.1.14"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.7.1",
+        "@emotion/styled": "^11.6.0",
+        "@inertiajs/inertia": "^0.11.0",
+        "@inertiajs/inertia-react": "^0.8.0",
+        "@inertiajs/progress": "^0.2.7",
+        "@mui/icons-material": "^5.2.5",
+        "@mui/material": "^5.2.7",
+        "@mui/x-data-grid": "^5.2.2",
+        "mdb-react-ui-kit": "^2.2.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-minimal-side-navigation": "^1.9.2"
+    }
+}
