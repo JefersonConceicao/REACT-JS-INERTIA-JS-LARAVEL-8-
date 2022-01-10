@@ -15,16 +15,18 @@ import {
 
 const Layout = ({ children }) => {
     const [showNav, setShowNav] = useState(false);
+    const currentRoutePrefix = window.location.pathname.split('/')[1];
+
     const items = [
         {
             id:1,
             name: 'Usuários',
-            route: '/'
+            route: '/users/'
         },
         {
             id:2,
             name: 'Grupos',
-            route: '/roles'
+            route: '/roles/'
         },
         {
             id:3,
@@ -65,7 +67,7 @@ const Layout = ({ children }) => {
                                             style={{cursor:'pointer'}}
                                         >
                                             <MDBTypography
-                                                tag={option.route === window.location.pathname
+                                                tag={option.route.split('/')[1] === currentRoutePrefix
                                                     ? "h4"
                                                     :  "small"
                                                 }>

@@ -3174,14 +3174,15 @@ var Layout = function Layout(_ref) {
       showNav = _useState2[0],
       setShowNav = _useState2[1];
 
+  var currentRoutePrefix = window.location.pathname.split('/')[1];
   var items = [{
     id: 1,
     name: 'Usuários',
-    route: '/'
+    route: '/users/'
   }, {
     id: 2,
     name: 'Grupos',
-    route: '/roles'
+    route: '/roles/'
   }, {
     id: 3,
     name: 'Setores',
@@ -3229,7 +3230,7 @@ var Layout = function Layout(_ref) {
                       cursor: 'pointer'
                     },
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBTypography, {
-                      tag: option.route === window.location.pathname ? "h4" : "small",
+                      tag: option.route.split('/')[1] === currentRoutePrefix ? "h4" : "small",
                       children: option.name
                     })
                   })
@@ -3264,8 +3265,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Layout */ "./resources/js/Layout/index.js");
-/* harmony import */ var mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! mdb-react-ui-kit */ "./node_modules/mdb-react-ui-kit/dist/mdb-react-ui-kit.esm.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! mdb-react-ui-kit */ "./node_modules/mdb-react-ui-kit/dist/mdb-react-ui-kit.esm.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -3275,56 +3278,61 @@ __webpack_require__.r(__webpack_exports__);
 
 var Init = function Init(_ref) {
   var data = _ref.data;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBRow, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBCol, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_3__.MDBRow, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_3__.MDBCol, {
         size: "12",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBCard, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_3__.MDBCard, {
           className: "bg-default shadow-1-strong",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBCardHeader, {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBCardTitle, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_3__.MDBCardHeader, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_3__.MDBCardTitle, {
               className: "mt-2",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBRow, {
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBCol, {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_3__.MDBRow, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_3__.MDBCol, {
                   size: "6",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBTypography, {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_3__.MDBTypography, {
                     variant: "h4",
                     children: "Usu\xE1rios"
                   })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBCol, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_3__.MDBCol, {
                   size: "6",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBBtn, {
-                    rounded: true,
-                    color: "success",
-                    style: {
-                      "float": "right"
-                    },
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBIcon, {
-                      icon: "plus",
-                      size: "lg"
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
+                    href: "/users/create",
+                    method: "get",
+                    as: "div",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_3__.MDBBtn, {
+                      rounded: true,
+                      color: "success",
+                      style: {
+                        "float": "right"
+                      },
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_3__.MDBIcon, {
+                        icon: "plus",
+                        size: "lg"
+                      })
                     })
                   })
                 })]
               })
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBCardBody, {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBTable, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_3__.MDBCardBody, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_3__.MDBTable, {
               hover: true,
               bordered: true,
               responsive: true,
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBTableHead, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_3__.MDBTableHead, {
                 dark: true,
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("tr", {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
                     scope: "col",
                     children: " Nome "
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
                     scope: "col",
                     children: " E-mail "
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
                     scope: "col",
                     children: " Ultimo Login "
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("th", {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("th", {
                     scope: "col",
                     style: {
                       width: "4%"
@@ -3332,26 +3340,26 @@ var Init = function Init(_ref) {
                     children: [" ", "A\xE7\xF5es", " "]
                   })]
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBTableBody, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_3__.MDBTableBody, {
                 children: data.map(function (user, index) {
-                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("tr", {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("td", {
                       children: [" ", user.name, " "]
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("td", {
                       children: [" ", user.email, " "]
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("td", {
                       children: [" ", !!user.last_login ? user.last_login : "Não informado"]
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("td", {
                       className: "d-flex justify-content-between",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBBtn, {
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_3__.MDBBtn, {
                         color: "primary",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBIcon, {
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_3__.MDBIcon, {
                           icon: "edit",
                           size: "md"
                         })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBBtn, {
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_3__.MDBBtn, {
                         color: "danger",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBIcon, {
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_3__.MDBIcon, {
                           icon: "trash-alt",
                           size: "md"
                         })
@@ -3369,7 +3377,7 @@ var Init = function Init(_ref) {
 };
 
 Init.layout = function (page) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     children: page
   });
 };

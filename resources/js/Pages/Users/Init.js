@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../Layout";
 
+import { Link } from '@inertiajs/inertia-react'
 import {
     MDBCard,
     MDBCardBody,
@@ -31,13 +32,15 @@ const Init = ({ data }) => {
                                         </MDBTypography>
                                     </MDBCol>
                                     <MDBCol size="6">
-                                        <MDBBtn
-                                            rounded
-                                            color="success"
-                                            style={{ float: "right" }}
-                                        >
-                                            <MDBIcon icon="plus" size="lg" />
-                                        </MDBBtn>
+                                        <Link href="/users/create" method="get" as="div">
+                                            <MDBBtn
+                                                rounded
+                                                color="success"
+                                                style={{ float: "right" }}
+                                            >
+                                                <MDBIcon icon="plus" size="lg" />
+                                            </MDBBtn>
+                                        </Link>
                                     </MDBCol>
                                 </MDBRow>
                             </MDBCardTitle>

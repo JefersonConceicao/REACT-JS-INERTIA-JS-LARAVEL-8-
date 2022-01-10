@@ -3174,14 +3174,15 @@ var Layout = function Layout(_ref) {
       showNav = _useState2[0],
       setShowNav = _useState2[1];
 
+  var currentRoutePrefix = window.location.pathname.split('/')[1];
   var items = [{
     id: 1,
     name: 'Usuários',
-    route: '/'
+    route: '/users/'
   }, {
     id: 2,
     name: 'Grupos',
-    route: '/roles'
+    route: '/roles/'
   }, {
     id: 3,
     name: 'Setores',
@@ -3229,7 +3230,7 @@ var Layout = function Layout(_ref) {
                       cursor: 'pointer'
                     },
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_2__.MDBTypography, {
-                      tag: option.route === window.location.pathname ? "h4" : "small",
+                      tag: option.route.split('/')[1] === currentRoutePrefix ? "h4" : "small",
                       children: option.name
                     })
                   })
